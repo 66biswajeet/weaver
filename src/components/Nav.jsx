@@ -42,7 +42,6 @@ const Nav = () => {
     height: 43px;
     text-align: center;
     padding: 0 10px 4px 10px;
-    cursor: pointer;
 
     &:after {
       content: "";
