@@ -1,7 +1,14 @@
 import "./App.css";
+import Nav from "./components/Nav";
+import Section1 from "./components/Section1";
 
 function App() {
-  return <>Weavers wellfare organization author : biswajeet</>;
+  return (
+    <>
+      <Nav />
+      <Section1 />
+    </>
+  );
 }
 
 export default App;
