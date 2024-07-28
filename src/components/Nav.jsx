@@ -44,6 +44,7 @@ const Nav = () => {
     padding: 0 10px 4px 10px;
     border: none;
     margin-left: 20px;
+    cursor: pointer;
 
     &:after {
       content: "";
