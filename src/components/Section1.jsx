@@ -7,6 +7,7 @@ const CarouselContainer = styled.div`
   height: 500px;
   overflow: hidden;
   z-index: 1;
+  top: 50px;
 
   @media (max-width: 600px) {
     height: 400px;
@@ -62,6 +63,7 @@ const SliderContent = styled.div`
 const SliderTitle = styled.h2`
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 800;
 
   @media (max-width: 992px) {
     font-size: 2.5rem;
@@ -145,14 +147,14 @@ const Section1 = () => {
     {
       image:
         "https://firebasestorage.googleapis.com/v0/b/bharat-shakti-foundation.appspot.com/o/campaignDocuments%2F6.jpg?alt=media&token=a1b4010a-cb25-4380-aa22-0708fd747ce6",
-      title: "Discover the Future",
-      description: "Explore cutting-edge technology shaping our world.",
+      title: "Provide Education in Rural area",
+      description: "Be a part in taking the education one step forward",
     },
     {
       image:
         "https://firebasestorage.googleapis.com/v0/b/bharat-shakti-foundation.appspot.com/o/campaignDocuments%2F5.jpg?alt=media&token=0953f0dc-ae20-4c40-8186-6063f8804761",
-      title: "Innovate with AI",
-      description: "Unlock the potential of artificial intelligence.",
+      title: "Hunger Will be Quenched",
+      description: "Unlock the potential of humanity.",
     },
     // Add more slides as needed
   ];

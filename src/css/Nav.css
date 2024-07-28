@@ -5,16 +5,20 @@ nav {
   top: 0;
   width: 100%;
   z-index: 100;
+  color: black;
 }
 
 nav .brand-logo {
   font-weight: bold;
   font-size: 2rem;
+  color: black;
 }
 
 nav ul a {
   font-size: 1.1rem;
   transition: color 0.3s ease;
+  color: black;
+  font-weight: 700;
 }
 
 nav ul a:hover {

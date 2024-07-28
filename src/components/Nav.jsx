@@ -41,6 +41,8 @@ const Nav = () => {
     height: 45px;
     text-align: center;
     padding: 0 10px 4px 10px;
+    border: none;
+    margin-left: 20px;
 
     &:after {
       content: "";
