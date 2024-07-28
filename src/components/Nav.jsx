@@ -39,7 +39,7 @@ const Nav = () => {
     overflow: hidden;
     font-size: 1.5rem; /* text-2xl */
     /* text-shadow */
-    height: 45px;
+    height: 43px;
     text-align: center;
     padding: 0 10px 4px 10px;
     cursor: pointer;
