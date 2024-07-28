@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   font-family: Arial, sans-serif;
   max-width: 1200px;
   margin: 0 auto;
@@ -9,7 +10,7 @@ const Container = styled.div`
   padding: 50px;
 `;
 
-const Title = styled.h1`
+const Title = styled(motion.h1)`
   font-size: 36px;
   margin-bottom: 10px;
   font-weight: 700;
@@ -19,7 +20,7 @@ const Title = styled.h1`
   }
 `;
 
-const Subtitle = styled.p`
+const Subtitle = styled(motion.p)`
   font-size: 18px;
   color: #666;
   margin-bottom: 30px;
@@ -29,13 +30,13 @@ const Subtitle = styled.p`
   }
 `;
 
-const FeaturesContainer = styled.div`
+const FeaturesContainer = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 `;
 
-const Feature = styled.div`
+const Feature = styled(motion.div)`
   flex: 1;
   min-width: 250px;
   padding: 20px;
@@ -48,7 +49,7 @@ const Feature = styled.div`
   }
 `;
 
-const CheckIcon = styled.span`
+const CheckIcon = styled(motion.span)`
   color: #ff4500;
   font-size: 24px;
 `;
@@ -63,35 +64,69 @@ const FeatureDescription = styled.p`
   color: #666;
 `;
 
-const Section2 = () => (
-  <Container>
-    <Title>Give Monthly</Title>
-    <Subtitle>Sign up once and invest in India's future every month</Subtitle>
-    <FeaturesContainer>
-      <Feature>
-        <CheckIcon>✓</CheckIcon>
-        <FeatureTitle>Real Changes</FeatureTitle>
-        <FeatureDescription>
-          Your choice to give monthly will make a long-lasting impact
-        </FeatureDescription>
-      </Feature>
-      <Feature>
-        <CheckIcon>✓</CheckIcon>
-        <FeatureTitle>Regular Changes</FeatureTitle>
-        <FeatureDescription>
-          Learn how you are changing lives through our reports
-        </FeatureDescription>
-      </Feature>
-      <Feature>
-        <CheckIcon>✓</CheckIcon>
-        <FeatureTitle>Trusted Giving</FeatureTitle>
-        <FeatureDescription>
-          Every beneficiary you support is under the care of GiveAssured
-          nonprofits
-        </FeatureDescription>
-      </Feature>
-    </FeaturesContainer>
-  </Container>
-);
+const Section2 = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
+  };
+
+  const featureVariants = {
+    hidden: { scale: 0.8, opacity: 0 },
+    visible: { scale: 1, opacity: 1, transition: { duration: 0.5 } },
+  };
+
+  const iconVariants = {
+    hidden: { scale: 0 },
+    visible: {
+      scale: 1,
+      transition: { type: "spring", stiffness: 500, damping: 10 },
+    },
+  };
+
+  return (
+    <Container variants={containerVariants} initial="hidden" animate="visible">
+      <Title variants={itemVariants}>Give Monthly</Title>
+      <Subtitle variants={itemVariants}>
+        Sign up once and invest in India's future every month
+      </Subtitle>
+      <FeaturesContainer>
+        {[
+          {
+            title: "Real Changes",
+            description:
+              "Your choice to give monthly will make a long-lasting impact",
+          },
+          {
+            title: "Regular Changes",
+            description: "Learn how you are changing lives through our reports",
+          },
+          {
+            title: "Trusted Giving",
+            description:
+              "Every beneficiary you support is under the care of GiveAssured nonprofits",
+          },
+        ].map((feature, index) => (
+          <Feature key={index} variants={featureVariants}>
+            <CheckIcon variants={iconVariants}>✓</CheckIcon>
+            <FeatureTitle>{feature.title}</FeatureTitle>
+            <FeatureDescription>{feature.description}</FeatureDescription>
+          </Feature>
+        ))}
+      </FeaturesContainer>
+    </Container>
+  );
+};
 
 export default Section2;
