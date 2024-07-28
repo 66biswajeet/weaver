@@ -117,7 +117,7 @@ const PayButton = styled(Button)`
 `;
 
 const ReadButton = styled(Button)`
-  background-color: #2196f3;
+  background-color: #26a8b9;
 `;
 
 const Indicators = styled.div`

@@ -11,7 +11,15 @@ nav {
 nav .brand-logo {
   font-weight: bold;
   font-size: 2rem;
+  position: relative;
+  height: 50px;
+}
+nav .brand-logo img {
+  height: 65px;
+  padding-top: 10px;
+
   color: black;
+
 }
 
 nav ul a {
