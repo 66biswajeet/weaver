@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import img1 from "../assets/fund.png";
+import { motion } from "framer-motion";
 
 const CardContainer = styled.div`
   display: flex;
@@ -12,12 +12,13 @@ const CardContainer = styled.div`
   padding: 0 20px;
 `;
 
-const Card = styled.div`
+const Card = styled(motion.div)`
   width: 300px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-family: Arial, sans-serif;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -96,7 +97,7 @@ const DonateButton = styled.button`
 const Cardcomponent = () => {
   const blogPosts = [
     {
-      img: " https://firebasestorage.googleapis.com/v0/b/bharat-shakti-foundation.appspot.com/o/monthlyCampaignDocuments%2F4.png?alt=media&token=b9f8577c-0edd-4a58-ba82-7e2ae5f1c669",
+      img: "https://firebasestorage.googleapis.com/v0/b/bharat-shakti-foundation.appspot.com/o/monthlyCampaignDocuments%2F4.png?alt=media&token=b9f8577c-0edd-4a58-ba82-7e2ae5f1c669",
       title: "Exciting New Tech",
       stat1: 542,
       stat2: 158,
@@ -123,14 +124,19 @@ const Cardcomponent = () => {
         "Discover the latest breakthroughs shaping the future of technology  insightful post.",
     },
   ];
+
   return (
     <CardContainer>
       {blogPosts.map((post, index) => (
-        <Card key={index}>
-          <div style={{ position: "relative" }}>
+        <Card
+          key={index}
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <motion.div style={{ position: "relative" }}>
             <Image src={post.img} alt="Child holding food packet" />
             <TaxBenefit>Tax Benefit</TaxBenefit>
-          </div>
+          </motion.div>
           <Content>
             <Title>{post.title}</Title>
             <Stats>
