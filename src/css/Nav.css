@@ -16,10 +16,9 @@ nav .brand-logo {
 }
 nav .brand-logo img {
   height: 65px;
-  padding-top: 10px;
+  padding: 5px 0px;
 
   color: black;
-
 }
 
 nav ul a {
