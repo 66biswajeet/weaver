@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import M from "materialize-css";
 import "../css/Nav.css";
 import styled from "styled-components";
+import logo from "../assets/fund.png";
 
 const Nav = () => {
   const sideNavRef = useRef(null);
@@ -29,7 +30,7 @@ const Nav = () => {
 
   const StyledButton = styled.button`
     padding: 1rem 2rem; /* px-8 py-4 equivalent */
-    background-color: #f43f5e; /* bg-rose-400 */
+    background-color: #26a8b9; /* bg-rose-400 */
     border-radius: 0.375rem; /* rounded-md */
     color: white;
     font-weight: 600; /* font-semibold */
@@ -37,17 +38,18 @@ const Nav = () => {
     position: relative;
     overflow: hidden;
     font-size: 1.5rem; /* text-2xl */
-    text-shadow: 3px 5px 2px #be123c; /* text-shadow */
+    /* text-shadow */
     height: 45px;
     text-align: center;
     padding: 0 10px 4px 10px;
+    cursor: pointer;
 
     &:after {
       content: "";
       position: absolute;
       height: 0.25rem; /* h-1 */
       width: 0.25rem; /* w-1 */
-      background-color: #be123c; /* bg-rose-800 */
+      background-color: #147885; /* bg-rose-800 */
       left: 1.25rem; /* left-5 */
       bottom: 0;
       transform: translateY(100%);
@@ -57,7 +59,9 @@ const Nav = () => {
     }
 
     &:hover {
-      text-shadow: 2px 2px 2px #fda4af; /* hover:text-shadow */
+      text-shadow: 2px 2px 2px #fda4af;
+      /* hover:text-shadow */
+      background-color: #147885;
     }
 
     &:hover:after {
@@ -70,7 +74,7 @@ const Nav = () => {
       <nav className="transparent z-depth-0">
         <div className="nav-wrapper container">
           <a href="#!" className="brand-logo">
-            WWT
+            <img src={logo} />
           </a>
           <ul className="right hide-on-med-and-down">
             <li>
