@@ -6,17 +6,15 @@ import Cardcomponent from "./components/Cardcomponent";
 
 import Section2 from "./components/Section2";
 
-
 function App() {
   return (
     <>
       <Nav />
       <Section1 />
 
-      <Cardcomponent />
-
       <Section2 />
 
+      <Cardcomponent />
     </>
   );
 }
