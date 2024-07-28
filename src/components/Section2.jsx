@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Container = styled(motion.div)`
   font-family: Arial, sans-serif;
@@ -65,6 +66,11 @@ const FeatureDescription = styled.p`
 `;
 
 const Section2 = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -79,47 +85,51 @@ const Section2 = () => {
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: { y: 0, opacity: 1, transition: { duration: 0.5 } },
-  };
-
-  const featureVariants = {
-    hidden: { scale: 0.8, opacity: 0 },
-    visible: { scale: 1, opacity: 1, transition: { duration: 0.5 } },
-  };
-
-  const iconVariants = {
-    hidden: { scale: 0 },
     visible: {
-      scale: 1,
-      transition: { type: "spring", stiffness: 500, damping: 10 },
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5 },
     },
   };
 
+  const features = [
+    {
+      title: "Real Changes",
+      description:
+        "Your choice to give monthly will make a long-lasting impact",
+    },
+    {
+      title: "Regular Changes",
+      description: "Learn how you are changing lives through our reports",
+    },
+    {
+      title: "Trusted Giving",
+      description:
+        "Every beneficiary you support is under the care of GiveAssured nonprofits",
+    },
+  ];
+
   return (
-    <Container variants={containerVariants} initial="hidden" animate="visible">
+    <Container
+      ref={ref}
+      variants={containerVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+    >
       <Title variants={itemVariants}>Give Monthly</Title>
       <Subtitle variants={itemVariants}>
         Sign up once and invest in India's future every month
       </Subtitle>
       <FeaturesContainer>
-        {[
-          {
-            title: "Real Changes",
-            description:
-              "Your choice to give monthly will make a long-lasting impact",
-          },
-          {
-            title: "Regular Changes",
-            description: "Learn how you are changing lives through our reports",
-          },
-          {
-            title: "Trusted Giving",
-            description:
-              "Every beneficiary you support is under the care of GiveAssured nonprofits",
-          },
-        ].map((feature, index) => (
-          <Feature key={index} variants={featureVariants}>
-            <CheckIcon variants={iconVariants}>✓</CheckIcon>
+        {features.map((feature, index) => (
+          <Feature key={index} variants={itemVariants}>
+            <CheckIcon
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 0.3, delay: 0.1 * index }}
+            >
+              ✓
+            </CheckIcon>
             <FeatureTitle>{feature.title}</FeatureTitle>
             <FeatureDescription>{feature.description}</FeatureDescription>
           </Feature>
