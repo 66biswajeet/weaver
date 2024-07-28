@@ -1,7 +1,8 @@
 import "./App.css";
 
 function App() {
-  return <>Weavers wellfare organization</>;
+  return <>Weavers  organization</>;
+
 }
 
 export default App;
