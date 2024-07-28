@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import M from "materialize-css";
 import "../css/Nav.css";
+import styled from "styled-components";
 
 const Nav = () => {
   const sideNavRef = useRef(null);
@@ -26,6 +27,44 @@ const Nav = () => {
     instance.isOpen ? instance.close() : instance.open();
   };
 
+  const StyledButton = styled.button`
+    padding: 1rem 2rem; /* px-8 py-4 equivalent */
+    background-color: #f43f5e; /* bg-rose-400 */
+    border-radius: 0.375rem; /* rounded-md */
+    color: white;
+    font-weight: 600; /* font-semibold */
+    font-family: "sans-serif"; /* font-sans */
+    position: relative;
+    overflow: hidden;
+    font-size: 1.5rem; /* text-2xl */
+    text-shadow: 3px 5px 2px #be123c; /* text-shadow */
+    height: 45px;
+    text-align: center;
+    padding: 0 10px 4px 10px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 0.25rem; /* h-1 */
+      width: 0.25rem; /* w-1 */
+      background-color: #be123c; /* bg-rose-800 */
+      left: 1.25rem; /* left-5 */
+      bottom: 0;
+      transform: translateY(100%);
+      border-radius: 0.375rem; /* rounded-md */
+      transition: all 0.7s;
+      z-index: -20;
+    }
+
+    &:hover {
+      text-shadow: 2px 2px 2px #fda4af; /* hover:text-shadow */
+    }
+
+    &:hover:after {
+      transform: scale(3) translateY(100%);
+      transition: all 0.7s;
+    }
+  `;
   return (
     <>
       <nav className="transparent z-depth-0">
@@ -46,6 +85,7 @@ const Nav = () => {
             <li>
               <a href="#contact">Monthly Campains</a>
             </li>
+            <StyledButton>Fund Raiser</StyledButton>
           </ul>
 
           <a
@@ -76,6 +116,7 @@ const Nav = () => {
         <li>
           <a href="#contact">Contact Us</a>
         </li>
+        <StyledButton>Fund Raiser</StyledButton>
       </ul>
     </>
   );
