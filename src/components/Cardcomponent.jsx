@@ -7,7 +7,7 @@ const CardContainer = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   gap: 50px;
-  margin: 100px auto;
+  margin: 60px auto;
   max-width: 1200px;
   padding: 0 20px;
 `;
