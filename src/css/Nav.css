@@ -41,6 +41,7 @@ nav ul a:hover {
   transform: rotate(0deg);
   transition: 0.5s ease-in-out;
   cursor: pointer;
+  z-index: 10005;
 }
 
 .hamburger span {

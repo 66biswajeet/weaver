@@ -109,18 +109,23 @@ const Nav = () => {
         </div>
       </nav>
 
-      <ul id="mobile-nav" className="sidenav" ref={sideNavRef}>
+      <ul
+        id="mobile-nav"
+        className="sidenav"
+        ref={sideNavRef}
+        onClick={toggleSideNav}
+      >
         <li>
-          <a href="#home">Home</a>
+          <a href="#home">Explore Campains</a>
         </li>
         <li>
-          <a href="#explore">Explore</a>
+          <a href="#explore">CSR</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about">Discover NGOs</a>
         </li>
         <li>
-          <a href="#contact">Contact Us</a>
+          <a href="#contact">Monthly Campains</a>
         </li>
         <StyledButton>Fund Raiser</StyledButton>
       </ul>
