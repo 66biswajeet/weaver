@@ -36,6 +36,7 @@ const FeaturesContainer = styled(motion.div)`
   justify-content: space-between;
   flex-wrap: wrap;
   column-gap: 40px;
+  row-gap: 15px;
   width: 100%;
 `;
 
