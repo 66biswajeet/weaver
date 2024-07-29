@@ -8,7 +8,7 @@ const CardContainer = styled.div`
   justify-content: center;
   gap: 50px;
   margin: 60px auto;
-  max-width: 1200px;
+  max-width: 100%;
   padding: 0 20px;
 `;
 
@@ -72,7 +72,7 @@ const ProgressBar = styled.div`
 
 const Progress = styled.div`
   height: 100%;
-  width: 100%;
+  width: 50%;
   background-color: #ffa500;
   border-radius: 2px;
 `;
@@ -86,7 +86,7 @@ const Target = styled.p`
 const DonateButton = styled.button`
   width: 100%;
   padding: 12px;
-  background-color: #ff4136;
+  background-color: #26a8b9;
   color: white;
   border: none;
   border-radius: 4px;
@@ -107,6 +107,15 @@ const Cardcomponent = () => {
     },
     {
       img: "https://firebasestorage.googleapis.com/v0/b/bharat-shakti-foundation.appspot.com/o/monthlyCampaignDocuments%2Fophan-img.jpg?alt=media&token=fa39394e-dbde-4af7-a470-777d9ab87f80",
+      title: "Exciting New Tech",
+      stat1: 542,
+      stat2: 158,
+      target: "Target: 0 left out of 80000",
+      description:
+        "Discover the latest breakthroughs shaping the future of technology  insightful post.",
+    },
+    {
+      img: "https://firebasestorage.googleapis.com/v0/b/bharat-shakti-foundation.appspot.com/o/monthlyCampaignDocuments%2F3.png?alt=media&token=e5dbf9c1-27fc-47e7-a141-67cfba67fa0e",
       title: "Exciting New Tech",
       stat1: 542,
       stat2: 158,

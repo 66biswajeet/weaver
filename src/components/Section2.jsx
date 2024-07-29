@@ -35,7 +35,9 @@ const FeaturesContainer = styled(motion.div)`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  row-gap: 10px;
+  column-gap: 40px;
+  row-gap: 15px;
+  width: 100%;
 `;
 
 const Feature = styled(motion.div)`
@@ -45,6 +47,7 @@ const Feature = styled(motion.div)`
   margin: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  scale: 110%;
 
   @media (max-width: 768px) {
     flex-basis: 100%;
@@ -52,13 +55,15 @@ const Feature = styled(motion.div)`
 `;
 
 const CheckIcon = styled(motion.span)`
-  color: #ff4500;
+  color: #26a8b9;
   font-size: 24px;
+  font-weight: bold;
 `;
 
 const FeatureTitle = styled.h3`
   font-size: 18px;
   margin: 10px 0;
+  font-weight: bold;
 `;
 
 const FeatureDescription = styled.p`
