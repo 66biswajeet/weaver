@@ -19,6 +19,7 @@ function App() {
       <Section2 />
       <Campaign />
       <Cardcomponent />
+      milan typing
       {isMobile && <MobNav />}
     </>
   );
