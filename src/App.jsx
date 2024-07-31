@@ -68,29 +68,8 @@ function App() {
     <>
       <Nav />
       <Section1 />
-      <AnimatedComponent animation={slideRight}>
-        <Section2 />
-      </AnimatedComponent>
-      <AnimatedComponent animation={slideLeft}>
-        <Campaign />
-      </AnimatedComponent>
-      <AnimatedComponent animation={slideRight}>
-        <Cardcomponent />
-      </AnimatedComponent>
-      <AnimatedComponent animation={slideUp}>
-        <Partners />
-      </AnimatedComponent>
-      <AnimatedComponent animation={scale}>
-        <Fund />
-      </AnimatedComponent>
-      <AnimatedComponent animation={slideRight}>
-        <Donation />
-      </AnimatedComponent>
-      <AnimatedComponent animation={scale}>
-        <Fund2 />
-      </AnimatedComponent>
-      <SocialRecognition />
-
+      <Section2 />
+      <Cardcomponent />
       {isMobile && <MobNav />}
     </>
   );
