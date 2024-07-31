@@ -2,15 +2,24 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "./App.css";
+
 import Nav from "./components/Nav";
 import Section1 from "./components/Section1";
 import Campaign from "./components/Campaign";
 import Cardcomponent from "./components/Cardcomponent";
 import Section2 from "./components/Section2";
+import Partners from "./components/Partners";
 import MobNav from "./components/Mobnav";
+import Fund from "./components/Fund";
+import Fund2 from "./components/Fund2";
+import SocialRecognition from "./components/SocialRecognition";
+
 import { useMediaQuery } from "react-responsive";
+
+
 import Partners from "./components/Partners";
 import Donation from "./components/Donation";
+
 
 const AnimatedComponent = ({ children, animation }) => {
   const [ref, inView] = useInView({
@@ -61,28 +70,40 @@ function App() {
   return (
     <>
       <Nav />
-
       <Section1 />
-
       <AnimatedComponent animation={slideRight}>
         <Section2 />
       </AnimatedComponent>
-
       <AnimatedComponent animation={slideLeft}>
         <Campaign />
       </AnimatedComponent>
 
+
+
+
       <AnimatedComponent animation={slideRight}>
         <Cardcomponent />
       </AnimatedComponent>
-
       <AnimatedComponent animation={slideUp}>
         <Partners />
       </AnimatedComponent>
 
+      <AnimatedComponent animation={scale}>
+        <Fund />
+      </AnimatedComponent>
+      <AnimatedComponent animation={slideRight}>
+        <SocialRecognition />
+      </AnimatedComponent>
+      <AnimatedComponent animation={scale}>
+        <Fund2 />
+      </AnimatedComponent>
+      \{isMobile && <MobNav />}
+
+
       <Donation />
 
       {isMobile && <MobNav />}
+
     </>
   );
 }

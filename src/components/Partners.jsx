@@ -48,7 +48,7 @@ const CauseButton = styled.button`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e0e0e0;
+  border: 0.2px solid #e0e0e0;
   border-radius: 8px;
   background-color: ${(props) => (props.active ? "#147885" : "white")};
   color: ${(props) => (props.active ? "white" : "black")};
@@ -58,6 +58,7 @@ const CauseButton = styled.button`
   font-weight: bold;
   flex-shrink: 0;
   margin-top: 30px;
+  margin-bottom: 30px;
 
   &:hover {
     scale: 90%;
