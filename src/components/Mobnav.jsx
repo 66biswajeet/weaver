@@ -5,7 +5,7 @@ import { HiHome, HiCalendar, HiGift } from "react-icons/hi";
 
 const NavbarContainer = styled(motion.nav)`
   position: fixed;
-  top: 94%;
+  top: 93%;
   bottom: 0;
   left: 0;
   right: 0;
