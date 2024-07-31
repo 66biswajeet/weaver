@@ -10,6 +10,7 @@ import Section2 from "./components/Section2";
 import MobNav from "./components/Mobnav";
 import { useMediaQuery } from "react-responsive";
 import Partners from "./components/Partners";
+import Donation from "./components/Donation";
 
 const AnimatedComponent = ({ children, animation }) => {
   const [ref, inView] = useInView({
@@ -71,13 +72,15 @@ function App() {
         <Campaign />
       </AnimatedComponent>
 
-      <AnimatedComponent animation={scale}>
+      <AnimatedComponent animation={slideRight}>
         <Cardcomponent />
       </AnimatedComponent>
 
       <AnimatedComponent animation={slideUp}>
         <Partners />
       </AnimatedComponent>
+
+      <Donation />
 
       {isMobile && <MobNav />}
     </>
