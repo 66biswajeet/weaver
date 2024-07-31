@@ -16,6 +16,11 @@ import SocialRecognition from "./components/SocialRecognition";
 
 import { useMediaQuery } from "react-responsive";
 
+
+import Partners from "./components/Partners";
+import Donation from "./components/Donation";
+
+
 const AnimatedComponent = ({ children, animation }) => {
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -72,12 +77,17 @@ function App() {
       <AnimatedComponent animation={slideLeft}>
         <Campaign />
       </AnimatedComponent>
+
+
+
+
       <AnimatedComponent animation={slideRight}>
         <Cardcomponent />
       </AnimatedComponent>
       <AnimatedComponent animation={slideUp}>
         <Partners />
       </AnimatedComponent>
+
       <AnimatedComponent animation={scale}>
         <Fund />
       </AnimatedComponent>
@@ -88,6 +98,12 @@ function App() {
         <Fund2 />
       </AnimatedComponent>
       \{isMobile && <MobNav />}
+
+
+      <Donation />
+
+      {isMobile && <MobNav />}
+
     </>
   );
 }
