@@ -99,7 +99,7 @@ const causes = [
   },
 ];
 
-const Campaign = () => {
+const Partners = () => {
   const [activeCause, setActiveCause] = useState("ALL");
 
   return (
@@ -126,4 +126,4 @@ const Campaign = () => {
   );
 };
 
-export default Campaign;
+export default Partners;
