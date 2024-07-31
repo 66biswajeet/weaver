@@ -50,7 +50,7 @@ const slideLeft = {
 };
 
 const scale = {
-  hidden: { opacity: 0, scale: 0.8 },
+  hidden: { opacity: 0, scale: 0.5 },
   visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
 };
 
@@ -75,15 +75,11 @@ function App() {
         <Cardcomponent />
       </AnimatedComponent>
 
-      <AnimatedComponent animation={slideUp}>
+      {/* <AnimatedComponent animation={slideUp}>
         <Partners />
-      </AnimatedComponent>
+      </AnimatedComponent> */}
 
-      {isMobile && (
-        <AnimatedComponent animation={fadeIn}>
-          <MobNav />
-        </AnimatedComponent>
-      )}
+      {isMobile && <MobNav />}
     </>
   );
 }

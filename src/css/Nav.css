@@ -3,7 +3,7 @@ nav {
   backdrop-filter: blur(10px);
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 98vw;
   z-index: 100;
   color: black;
 }
