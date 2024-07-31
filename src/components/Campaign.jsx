@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const CampaignSection = styled.section`
   text-align: center;
-  padding: 22px;
+  padding: 23px;
   max-width: 1200px;
   margin: 0 auto;
 `;
