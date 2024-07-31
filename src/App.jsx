@@ -12,6 +12,7 @@ import Partners from "./components/Partners";
 import MobNav from "./components/Mobnav";
 import Fund from "./components/Fund";
 import Fund2 from "./components/Fund2";
+import Footer from "./components/Footer";
 import SocialRecognition from "./components/SocialRecognition";
 
 import { useMediaQuery } from "react-responsive";
@@ -90,6 +91,7 @@ function App() {
         <Fund2 />
       </AnimatedComponent>
       <SocialRecognition />
+      <Footer />
 
       {isMobile && <MobNav />}
     </>
