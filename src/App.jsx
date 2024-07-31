@@ -75,9 +75,9 @@ function App() {
         <Cardcomponent />
       </AnimatedComponent>
 
-      {/* <AnimatedComponent animation={slideUp}>
+      <AnimatedComponent animation={slideUp}>
         <Partners />
-      </AnimatedComponent> */}
+      </AnimatedComponent>
 
       {isMobile && <MobNav />}
     </>
