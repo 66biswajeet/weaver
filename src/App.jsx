@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import Mobnav from "./components/Mobnav";
 import { useMediaQuery } from "react-responsive";
 import Redirect1 from "./components/Redirect1";
+import Csr from "./components/Csr";
 
 const App = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 450px)" });
@@ -16,6 +17,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/redirect" element={<Redirect1 />} />
+          <Route path="/csr" element={<Csr />} />
         </Routes>
         {isMobile && <Mobnav />}
       </Router>
