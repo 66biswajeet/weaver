@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Mobnav from "./components/Mobnav";
 import { useMediaQuery } from "react-responsive";
 import Redirect1 from "./components/Redirect1";
+import Csr from "./components/Csr";
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/redirect" element={<Redirect1 />} />
+          <Route path="/csr" element={<Csr />} />
         </Routes>
         <Footer />
         {isMobile && <Mobnav />}

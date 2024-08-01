@@ -3,6 +3,7 @@ import M from "materialize-css";
 import "../css/Nav.css";
 import styled from "styled-components";
 import logo from "../assets/fund.png";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const sideNavRef = useRef(null);
@@ -75,7 +76,7 @@ const Nav = () => {
     <>
       <nav className="transparent z-depth-0">
         <div className="nav-wrapper container">
-          <a href="#!" className="brand-logo">
+          <a href="/" className="brand-logo">
             <img src={logo} />
           </a>
           <ul className="right hide-on-med-and-down">
@@ -83,7 +84,8 @@ const Nav = () => {
               <a href="/">Explore Campains</a>
             </li>
             <li>
-              <a href="/blogpost">CSR</a>
+              <Link to="/csr">CSR</Link>
+              {/* <a href="/blogpost">CSR</a> */}
             </li>
             <li>
               <a href="/blog">Discover NGOs</a>
@@ -119,7 +121,7 @@ const Nav = () => {
           <a href="#home">Explore Campains</a>
         </li>
         <li>
-          <a href="#explore">CSR</a>
+          <Link to="/csr">CSR</Link>
         </li>
         <li>
           <a href="#about">Discover NGOs</a>

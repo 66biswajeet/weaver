@@ -157,8 +157,8 @@ const Cardcomponent = () => {
               <Progress />
             </ProgressBar>
             <Target>{post.target}</Target>
-            <Link to="/redirect" >
-            <DonateButton >Donate Monthly</DonateButton>
+            <Link to="/redirect">
+              <DonateButton>Donate Monthly</DonateButton>
             </Link>
           </Content>
         </Card>
