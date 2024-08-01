@@ -75,7 +75,7 @@ const Nav = () => {
     <>
       <nav className="transparent z-depth-0">
         <div className="nav-wrapper container">
-          <a href="#!" className="brand-logo">
+          <a href="/" className="brand-logo">
             <img src={logo} />
           </a>
           <ul className="right hide-on-med-and-down">
