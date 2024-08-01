@@ -3,6 +3,7 @@ import M from "materialize-css";
 import "../css/Nav.css";
 import styled from "styled-components";
 import logo from "../assets/fund.png";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const sideNavRef = useRef(null);
@@ -83,7 +84,8 @@ const Nav = () => {
               <a href="/">Explore Campains</a>
             </li>
             <li>
-              <a href="/blogpost">CSR</a>
+              <Link to="/csr">CSR</Link>
+              {/* <a href="/blogpost">CSR</a> */}
             </li>
             <li>
               <a href="/blog">Discover NGOs</a>
