@@ -121,7 +121,7 @@ const Nav = () => {
           <a href="#home">Explore Campains</a>
         </li>
         <li>
-          <a href="/csr">CSR</a>
+          <Link to="/csr">CSR</Link>
         </li>
         <li>
           <a href="#about">Discover NGOs</a>
