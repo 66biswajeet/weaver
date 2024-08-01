@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
   display: flex;
@@ -156,7 +157,9 @@ const Cardcomponent = () => {
               <Progress />
             </ProgressBar>
             <Target>{post.target}</Target>
-            <DonateButton>Donate Monthly</DonateButton>
+            <Link to="/redirect" >
+            <DonateButton >Donate Monthly</DonateButton>
+            </Link>
           </Content>
         </Card>
       ))}

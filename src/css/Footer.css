@@ -3,7 +3,9 @@ footer{
     height: 100%;
     background-color:  #96bfc4;
     padding: 30px;
-    font-family: "sans-serif";
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding-bottom: 1px;
 }
 .Foot_img{
     width: 200px;
@@ -12,21 +14,27 @@ footer{
 .content{
     display: flex;
     justify-content: space-around;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     flex-direction: row;
+    align-content: center;
+    
+      }
+      
+      @media only screen and (max-width: 992px) {
+        .content {
+          flex-direction: column;
+          justify-content: center;
+          
+        }
+      }
+      
+h5{
+    font-weight: bold;
+    font-size: 18px;
 }
-/* .ref{
-    /*list-style: none;*/
-    /* display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-around;
-    row-gap: 20px;
-} */ 
-
-
+ 
 .lists{
-    font-size: 19px;
+    
     display: flex;
     flex-flow: column wrap;
     flex-direction: column;
@@ -42,4 +50,27 @@ a:link{
 a:hover{
     cursor: pointer;
     color: rgb(104, 103, 103);
+}
+.bottom{
+    padding-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+}
+@media only screen and (max-width: 992px) {
+    .bottom {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+.copyright{
+    padding-left: 30px;
+    font-size: 13px;
+}
+.icons{
+    font-size: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    row-gap: 18px;
 }
