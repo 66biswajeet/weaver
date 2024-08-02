@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const CarouselContainer = styled.div`
   position: relative;
@@ -189,8 +190,12 @@ const Section1 = () => {
               {slides[currentSlide].description}
             </SliderDescription>
             <SliderButtons>
-              <PayButton href="#">Pay Now</PayButton>
-              <ReadButton href="/blogpost">Read More</ReadButton>
+              <Link to="/payment">
+                <PayButton>Pay Now</PayButton>
+              </Link>
+              <Link to="/redirect">
+                <ReadButton>Read More</ReadButton>
+              </Link>
             </SliderButtons>
           </SliderContent>
         </Slide>

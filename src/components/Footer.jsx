@@ -1,69 +1,97 @@
-import React from 'react'
+import React from "react";
 import logo from "../assets/fund.png";
-import "../css/Footer.css"
-import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-
+import "../css/Footer.css";
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer>
-      <div className='content'>
-        <div className='br-image'>
+    <footer className="footer">
+      <div className="footer-content">
+        <div className="footer-section brand">
           <a href="#!" className="brand-logo">
-            <img className='Foot_img' src={logo} />
+            <img className="footer-logo" src={logo} alt="Logo" />
           </a>
+        </div>
 
+        <div className="footer-section">
+          <h5>On our site</h5>
+          <ul className="footer-links">
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/how-it-works">How it works</a>
+            </li>
+            <li>
+              <a href="/explore-campaigns">Explore campaigns</a>
+            </li>
+          </ul>
         </div>
-        
-        <div className='site'><h5>On our site</h5>
-          <span className='lists'>
-            <li><a href='/about'>About</a></li>
-            <li><a href='/how it works'>How it works</a></li>
-            <li><a href='/explore campaigns'>Explore campaigns</a></li>
-          </span>
-        </div>
-        <div className='support'>
+
+        <div className="footer-section">
           <h5>Support</h5>
-          <span className='lists'>
-            <li><a href='/FAQs'>FAQs</a></li>
-            <li><a href='/donation Policy'>Donation Policy</a></li>
-            <li><a href='/terms & Conditions'>Terms & Conditions</a></li>
-            <li><a href='/privacy Policy'>Privacy Policy</a></li>
-
-          </span>
+          <ul className="footer-links">
+            <li>
+              <a href="/FAQs">FAQs</a>
+            </li>
+            <li>
+              <a href="/donation-policy">Donation Policy</a>
+            </li>
+            <li>
+              <a href="/terms-conditions">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="/privacy-policy">Privacy Policy</a>
+            </li>
+          </ul>
         </div>
-        <div className='links'>
+
+        <div className="footer-section">
           <h5>Other links</h5>
-          <span className='lists'>
-            <li><a href='/start your campaign'>Start your campaign</a></li>
-            <li><a href='/back to top'>Back to top</a></li>
-
-          </span>
+          <ul className="footer-links">
+            <li>
+              <a href="/start-your-campaign">Start your campaign</a>
+            </li>
+            <li>
+              <a href="#top">Back to top</a>
+            </li>
+          </ul>
         </div>
-        <div className='contact'>
+
+        <div className="footer-section">
           <h5>Get in touch with us</h5>
-          <span className='lists'>
-            <li><a href='/address'>Mill Road, Keonjhar, India Pin-758002</a></li>
-            <li><a href='/contact no'>+91 8282828282</a></li>
-
-          </span>
+          <ul className="footer-links">
+            <li>
+              <a href="#">Mill Road, Keonjhar, India Pin-758002</a>
+            </li>
+            <li>
+              <a href="tel:+918282828282">+91 8282828282</a>
+            </li>
+          </ul>
         </div>
-        
       </div>
-      <div className='bottom'>
-        <div className='copyright'>Copyright @ 2024. Weaver Welfare Organisation. All rights reserved.</div>
-        <div className='icons'>
-        <a href='/fb'><FaFacebook/></a>
-        <a href='/twitter'><FaTwitter/></a>
-        <a href='/insta'><FaInstagram/></a>
-        <a href='/linkedin'><FaLinkedin/></a>
+
+      <div className="footer-bottom">
+        <div className="copyright">
+          Copyright @ 2024. Weaver Welfare Organisation. All rights reserved.
+        </div>
+        <div className="social-icons">
+          <a href="/fb">
+            <FaFacebook />
+          </a>
+          <a href="/twitter">
+            <FaTwitter />
+          </a>
+          <a href="/insta">
+            <FaInstagram />
+          </a>
+          <a href="/linkedin">
+            <FaLinkedin />
+          </a>
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
