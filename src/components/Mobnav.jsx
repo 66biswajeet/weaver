@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion, useAnimation } from "framer-motion";
 import { HiHome, HiCalendar, HiGift } from "react-icons/hi";
+import { FaRupeeSign } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NavbarContainer = styled(motion.nav)`
   position: fixed;
@@ -66,19 +68,25 @@ const Mobnav = () => {
       }}
     >
       <NavItem>
-        <IconWrapper>
-          <HiHome />
-        </IconWrapper>
+        <Link to="/">
+          <IconWrapper>
+            <HiHome />
+          </IconWrapper>
+        </Link>
       </NavItem>
       <NavItem>
-        <IconWrapper>
-          <HiCalendar />
-        </IconWrapper>
+        <Link to="/payment">
+          <IconWrapper>
+            <FaRupeeSign />
+          </IconWrapper>
+        </Link>
       </NavItem>
       <NavItem>
-        <IconWrapper>
-          <HiGift />
-        </IconWrapper>
+        <Link to="/csr">
+          <IconWrapper>
+            <HiGift />
+          </IconWrapper>
+        </Link>
       </NavItem>
     </NavbarContainer>
   );

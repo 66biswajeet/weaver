@@ -46,6 +46,7 @@ const Nav = () => {
     border: none;
     margin-left: 20px;
     cursor: pointer;
+    transition: all 0.5s;
 
     &:after {
       content: "";
@@ -62,7 +63,6 @@ const Nav = () => {
     }
 
     &:hover {
-      text-shadow: 2px 2px 2px #fda4af;
       /* hover:text-shadow */
       background-color: #147885;
     }
@@ -81,7 +81,7 @@ const Nav = () => {
           </a>
           <ul className="right hide-on-med-and-down">
             <li>
-              <a href="/">Explore Campains</a>
+              <Link to="/redirect">Explore Campaign</Link>
             </li>
             <li>
               <Link to="/csr">CSR</Link>
@@ -93,7 +93,11 @@ const Nav = () => {
             <li>
               <a href="#contact">Monthly Campains</a>
             </li>
-            <StyledButton>Fund Raiser</StyledButton>
+            <li>
+              <Link to="/payment">
+                <StyledButton>Fund Raiser</StyledButton>
+              </Link>
+            </li>
           </ul>
 
           <a
