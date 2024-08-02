@@ -34,7 +34,6 @@ const Card = styled.div`
   border-radius: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  z-index: 200;
 
   @media (max-width: 768px) {
     width: 95%;

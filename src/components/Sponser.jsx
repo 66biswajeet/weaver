@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.div`
   position: fixed;
-  bottom: 20px;
+  bottom: 0px;
   width: 80%;
   left: 10%;
   display: flex;
@@ -14,6 +15,7 @@ const Container = styled.div`
   border-top: 1px solid #e0e0e0;
   border-bottom: 1px solid #e0e0e0;
   border-radius: 20px;
+  z-index: 1000;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -97,7 +99,9 @@ const Sponser = () => {
           <Quantity>{quantity}</Quantity>
           <Button onClick={increment}>+</Button>
         </QuantityControl>
-        <DonateButton>Donate Monthly</DonateButton>
+        <Link to="/payment">
+          <DonateButton>Donate Monthly</DonateButton>
+        </Link>
       </Controls>
     </Container>
   );
