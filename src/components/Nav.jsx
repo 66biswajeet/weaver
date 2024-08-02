@@ -88,10 +88,10 @@ const Nav = () => {
               {/* <a href="/blogpost">CSR</a> */}
             </li>
             <li>
-              <a href="/blog">Discover NGOs</a>
+              <a href="/redirect">Discover NGOs</a>
             </li>
             <li>
-              <a href="#contact">Monthly Campains</a>
+              <a href="/">Monthly Campains</a>
             </li>
             <li>
               <Link to="/payment">
@@ -122,16 +122,16 @@ const Nav = () => {
         onClick={toggleSideNav}
       >
         <li>
-          <a href="#home">Explore Campains</a>
+          <a href="/redirect">Explore Campains</a>
         </li>
         <li>
           <Link to="/csr">CSR</Link>
         </li>
         <li>
-          <a href="#about">Discover NGOs</a>
+          <a href="/redirect">Discover NGOs</a>
         </li>
         <li>
-          <a href="#contact">Monthly Campains</a>
+          <a href="/">Monthly Campains</a>
         </li>
         <StyledButton>Fund Raiser</StyledButton>
       </ul>
