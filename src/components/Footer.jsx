@@ -32,16 +32,16 @@ const Footer = () => {
           <h5>Support</h5>
           <ul className="footer-links">
             <li>
-              <a href="/FAQs">FAQs</a>
+              <a href="/">FAQs</a>
             </li>
             <li>
-              <a href="/donation-policy">Donation Policy</a>
+              <a href="/">Donation Policy</a>
             </li>
             <li>
-              <a href="/terms-conditions">Terms & Conditions</a>
+              <a href="/">Terms & Conditions</a>
             </li>
             <li>
-              <a href="/privacy-policy">Privacy Policy</a>
+              <a href="/">Privacy Policy</a>
             </li>
           </ul>
         </div>
@@ -50,7 +50,7 @@ const Footer = () => {
           <h5>Other links</h5>
           <ul className="footer-links">
             <li>
-              <a href="/start-your-campaign">Start your campaign</a>
+              <a href="/">Start your campaign</a>
             </li>
             <li>
               <a href="#top">Back to top</a>
