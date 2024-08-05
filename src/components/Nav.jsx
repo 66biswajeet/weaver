@@ -122,16 +122,16 @@ const Nav = () => {
         onClick={toggleSideNav}
       >
         <li>
-          <Link href="/redirect">Explore Campains</Link>
+          <Link to="/redirect">Explore Campains</Link>
         </li>
         <li>
           <Link to="/csr">CSR</Link>
         </li>
         <li>
-          <Link href="/redirect">Discover NGOs</Link>
+          <Link to="/redirect">Discover NGOs</Link>
         </li>
         <li>
-          <Link href="/">Monthly Campains</Link>
+          <Link to="/">Monthly Campains</Link>
         </li>
         <Link to="/payment">
           <StyledButton>Fund Raiser</StyledButton>
