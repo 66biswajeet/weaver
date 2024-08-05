@@ -133,7 +133,9 @@ const Nav = () => {
         <li>
           <Link href="/">Monthly Campains</Link>
         </li>
-        <StyledButton>Fund Raiser</StyledButton>
+        <Link to="/payment">
+          <StyledButton>Fund Raiser</StyledButton>
+        </Link>
       </ul>
     </>
   );

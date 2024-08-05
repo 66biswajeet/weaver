@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Png from "../assets/fund50.jpeg";
+import Png from "../assets/weaver-qr.png";
 
 const PaymentContainer = styled.div`
   max-width: 400px;
